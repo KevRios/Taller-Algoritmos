@@ -91,6 +91,29 @@ function ejercicioCuatro() {
     }
 }
 
+function ejercicioCinco(){
+    let valorProducto = Number(prompt(`Ingresar el valor de producto: `));
+    let cantidadProducto = Number(prompt(`Ingresar la cantidad de producto:`));
+    let valorComprado = valorProducto * cantidadProducto;
+    let iva = 0;
+    let descuento = 0;
+    if (valorComprado > 500000){
+        if(valorComprado >1000000){
+            descuento = valorComprado*0.10;
+            valorComprado-=descuento;
+            console.log(`Valor total: ${valorComprado}`);
+        }else{
+            console.log(`Valor total: ${valorComprado}`);
+        }
+    }else{
+        iva = valorComprado * 0.19;
+        valorComprado+=iva;
+        console.log(`El valor del iva es: ${iva}`);
+        console.log(`Valor total: ${valorComprado}`);
+    }
+}
+
+
 function mostrarEstadisticas() {
     console.log("=== Estadísticas ===");
     console.log("Ejercicio 1 se ejecutó " + contadorEjercicioUno + " veces");

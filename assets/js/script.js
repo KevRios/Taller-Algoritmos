@@ -67,6 +67,30 @@ if (ladoUno === ladoDos && ladoUno === ladoTres) {
 }
 }
 
+function ejercicioCuatro() {
+    let numeroUno = Number(prompt(`Ingresar el primer numero`));
+    let numeroDos = Number(prompt(`Ingresar el primer numero`));
+    let contadorNumerouno = 0;
+    let contadorNumeroDos = 0;
+    for (let i = 0; i < numeroUno; i++) {
+        if (numeroUno % i == 0) {
+            contadorNumerouno += i;
+        }
+    }
+    for (let ii = 0; ii < numeroDos; ii++) {
+        if (numeroDos % ii == 0) {
+            contadorNumeroDos += ii;
+        }
+    }
+    if (contadorNumeroDos != numeroUno) {
+        console.log(`El numero ${numeroUno} y el numero ${numeroDos} no son amigos`);
+    } else if (contadorNumerouno != numeroDos) {
+        console.log(`El numero ${numeroUno} y el numero ${numeroDos} no son amigos`);
+    } else {
+        console.log(`El numero ${numeroUno} y el numero ${numeroDos} sí son amigos`);
+    }
+}
+
 function mostrarEstadisticas() {
     console.log("=== Estadísticas ===");
     console.log("Ejercicio 1 se ejecutó " + contadorEjercicioUno + " veces");

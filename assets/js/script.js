@@ -113,6 +113,59 @@ function ejercicioCinco(){
     }
 }
 
+function ejercicioSeis(){
+    let notaFinal = 0;
+    let notaUno = Number(prompt(`Ingrese la primera nota`));
+    if (notaUno > 5) {
+        alert("Las notas deben ser entre 0 y 5");
+        return ejercicioSeis();
+    }
+    let notaDos = Number(prompt(`Ingrese la segunda nota`));
+    if (notaDos > 5) {
+        alert("Las notas deben ser entre 0 y 5");
+        return ejercicioSeis();
+    }
+    let notaTres = Number(prompt(`Ingrese la tercera nota`));
+    if (notaTres > 5) {
+        alert("Las notas deben ser entre 0 y 5");
+        return ejercicioSeis();
+    }
+    let notaCuatro = Number(prompt(`Ingrese la cuarta nota`));
+    if (notaCuatro > 5) {
+        alert("Las notas deben ser entre 0 y 5");
+        return ejercicioSeis();
+    }
+
+
+
+    if(notaCuatro === 5){
+        notaUno++
+        notaDos++
+        notaTres++
+        
+        notaUno = notaUno*0.10;
+        notaDos = notaDos*0.20;
+        notaTres = notaTres*0.30;
+        notaCuatro = notaCuatro*0.40;
+        notaFinal+=notaUno+notaDos+notaTres+notaCuatro;
+        if(notaFinal > 3.5 ){
+            console.log(`El estudiante ganó`);
+        }else{
+            console.log(`El estudiante perdio`);
+        }
+    }else{
+        notaUno = notaUno*0.10;
+        notaDos = notaDos*0.20;
+        notaTres = notaTres*0.30;
+        notaCuatro = notaCuatro*0.40;
+        notaFinal+=notaUno+notaDos+notaTres+notaCuatro;
+        if(notaFinal > 3.5 ){
+            console.log(`El estudiante ganó`);
+        }else{
+            console.log(`El estudiante perdio`);
+        }
+    }
+}
 
 function mostrarEstadisticas() {
     console.log("=== Estadísticas ===");
@@ -122,6 +175,10 @@ function mostrarEstadisticas() {
     console.log("Ejercicio 4 se ejecutó " + contadorEjercicioCuatro + " veces");
     console.log("Ejercicio 5 se ejecutó " + contadorEjercicioCinco + " veces");
     console.log("Ejercicio 6 se ejecutó " + contadorEjercicioSeis + " veces");
+
+    if(contadorEjercicioUno > contadorEjercicioDos && contadorEjercicioUno > contadorEjercicioTres && contadorEjercicioUno > contadorEjercicioCuatro && contadorEjercicioUno > contadorEjercicioCinco && contadorEjercicioUno > contadorEjercicioSeis){
+
+    }
 
 
 }

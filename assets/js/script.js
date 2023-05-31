@@ -177,8 +177,17 @@ function mostrarEstadisticas() {
     console.log("Ejercicio 6 se ejecutó " + contadorEjercicioSeis + " veces");
 
     if(contadorEjercicioUno > contadorEjercicioDos && contadorEjercicioUno > contadorEjercicioTres && contadorEjercicioUno > contadorEjercicioCuatro && contadorEjercicioUno > contadorEjercicioCinco && contadorEjercicioUno > contadorEjercicioSeis){
-
+        console.log(`El ejerciocio Uno fue el más ejecutado`);
+    }else if(contadorEjercicioDos > contadorEjercicioUno && contadorEjercicioDos > contadorEjercicioTres && contadorEjercicioDos > contadorEjercicioCuatro && contadorEjercicioDos > contadorEjercicioCinco && contadorEjercicioDos > contadorEjercicioSeis){
+        console.log(`El ejerciocio Dos fue el más ejecutado`);
+    }else if(contadorEjercicioTres > contadorEjercicioUno && contadorEjercicioTres > contadorEjercicioDos && contadorEjercicioTres > contadorEjercicioCuatro && contadorEjercicioTres > contadorEjercicioCinco && contadorEjercicioTres > contadorEjercicioSeis){
+        console.log(`El ejerciocio Tres fue el más ejecutado`);
+    }else if(contadorEjercicioCuatro > contadorEjercicioUno && contadorEjercicioCuatro > contadorEjercicioTres && contadorEjercicioCuatro > contadorEjercicioTres && contadorEjercicioCuatro > contadorEjercicioCinco && contadorEjercicioCuatro > contadorEjercicioSeis){
+        console.log(`El ejerciocio Cuatro fue el más ejecutado`);
+    }else if(contadorEjercicioCinco > contadorEjercicioUno && contadorEjercicioCinco > contadorEjercicioTres && contadorEjercicioCinco > contadorEjercicioCuatro && contadorEjercicioCinco > contadorEjercicioDos && contadorEjercicioCinco > contadorEjercicioSeis){
+        console.log(`El ejerciocio Cinco fue el más ejecutado`);
     }
+    
 
 
 }

@@ -5,37 +5,37 @@ let contadorEjercicioCuatro = 0;
 let contadorEjercicioCinco = 0;
 let contadorEjercicioSeis = 0;
 
-function ejercicioUno(){
+function ejercicioUno() {
     let numeroUno = Number(prompt(`Ingresar un numero:`));
     let numeroDos = Number(prompt(`Ingresar un numero:`));
     let numeroTres = Number(prompt(`Ingresar un numero:`));
-    
-    if(numeroUno > numeroDos && numeroUno > numeroTres){
-        if(numeroDos > numeroTres){
+
+    if (numeroUno > numeroDos && numeroUno > numeroTres) {
+        if (numeroDos > numeroTres) {
             console.log(`El numero ${numeroUno} es mayor que ${numeroDos} y ${numeroDos} es mayor que ${numeroTres}`);
-            
+
             console.log(`El numero ${numeroTres} es menor que ${numeroDos} y ${numeroDos} es menor que ${numeroUno}`);
-        }else if(numeroTres > numeroDos){
+        } else if (numeroTres > numeroDos) {
             console.log(`El numero ${numeroUno} es mayor que ${numeroTres} y ${numeroTres} es mayor que ${numeroDos}`);
 
             console.log(`El numero ${numeroDos} es menor que ${numeroTres} y ${numeroTres} es menor que ${numeroUno}`);
         }
-    }else if(numeroDos > numeroUno && numeroDos > numeroTres){
-        if(numeroUno > numeroTres){
+    } else if (numeroDos > numeroUno && numeroDos > numeroTres) {
+        if (numeroUno > numeroTres) {
             console.log(`El numero ${numeroDos} es mayor que ${numeroUno} y ${numeroUno} es mayor que ${numeroTres}`);
 
             console.log(`El numero ${numeroTres} es menor que ${numeroUno} y ${numeroUno} es menor que ${numeroDos}`);
-        }else if(numeroTres > numeroUno){
+        } else if (numeroTres > numeroUno) {
             console.log(`El numero ${numeroDos} es mayor que ${numeroTres} y ${numeroTres} es mayor que ${numeroUno}`);
 
             console.log(`El numero ${numeroUno} es menor que ${numeroTres} y ${numeroTres} es menor que ${numeroDos}`);
         }
-    }else if(numeroTres > numeroUno && numeroTres > numeroDos){
-        if(numeroUno > numeroDos){
+    } else if (numeroTres > numeroUno && numeroTres > numeroDos) {
+        if (numeroUno > numeroDos) {
             console.log(`El numero ${numeroTres} es mayor que ${numeroUno} y ${numeroUno} es mayor que ${numeroDos}`);
 
             console.log(`El numero ${numeroDos} es menor que ${numeroUno} y ${numeroUno} es menor que ${numeroTres}`);
-        }else if(numeroDos > numeroUno){
+        } else if (numeroDos > numeroUno) {
             console.log(`El numero ${numeroTres} es mayor que ${numeroDos} y ${numeroDos} es mayor que ${numeroUno}`);
 
             console.log(`El numero ${numeroUno} es menor que ${numeroDos} y ${numeroDos} es menor que ${numeroTres}`);
@@ -46,11 +46,25 @@ function ejercicioUno(){
     }
 }
 
-function ejercicioDos(){
+function ejercicioDos() {
     let velocidadOnda = Number(prompt(`Ingresar la velocidad de la Onda:`));
     let longitudOnda = Number(prompt(`Ingresar la longitud de la Onda:`));
-    let frecuencia = velocidadOnda/longitudOnda;
+    let frecuencia = velocidadOnda / longitudOnda;
     console.log(frecuencia);
+}
+
+function ejercicioTres(){
+	let ladoUno = parseFloat(prompt("Ingresa el primer lado del triángulo:"));	
+	let ladoDos = parseFloat(prompt("Ingresa el segundo lado del triángulo:"));
+	let ladoTres = parseFloat(prompt("Ingresa el tercer lado del triángulo:"));
+
+if (ladoUno === ladoDos && ladoUno === ladoTres) {
+  console.log("El triángulo es equilátero.");
+} else if (ladoUno === ladoDos || ladoUno === ladoTres || ladoDos === ladoTres) {
+  console.log("El triángulo es isósceles.");
+} else {
+  console.log("El triángulo es escaleno.");
+}
 }
 
 function mostrarEstadisticas() {
@@ -62,11 +76,11 @@ function mostrarEstadisticas() {
     console.log("Ejercicio 5 se ejecutó " + contadorEjercicioCinco + " veces");
     console.log("Ejercicio 6 se ejecutó " + contadorEjercicioSeis + " veces");
 
-    
+
 }
 
 function mostrarMenu() {
-    
+
 
     const opcion = Number(prompt(`Ingrese una opción \n=== Menú === \n1. Ordenar tres números \n2. Calcular el área de una circunferencia \n3. Determinar el tipo de triángulo \n4. Comprobar si dos números son amigos \n5. Calcular el valor de una compra \n6. Calcular la nota final de un estudiante \n0. Salir`));
 
@@ -77,7 +91,7 @@ function mostrarMenu() {
         case 1:
             ejercicioUno();
             contadorEjercicioUno++;
-            return mostrarMenu(); 
+            return mostrarMenu();
         case 2:
             ejercicioDos();
             contadorEjercicioDos++;

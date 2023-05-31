@@ -46,7 +46,12 @@ function ejercicioUno(){
     }
 }
 
-
+function ejercicioDos(){
+    let velocidadOnda = Number(prompt(`Ingresar la velocidad de la Onda:`));
+    let longitudOnda = Number(prompt(`Ingresar la longitud de la Onda:`));
+    let frecuencia = velocidadOnda/longitudOnda;
+    console.log(frecuencia);
+}
 
 function mostrarEstadisticas() {
     console.log("=== Estadísticas ===");
